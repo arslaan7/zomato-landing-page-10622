@@ -2,4 +2,130 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero__section{
+    background: url(/images/heroSectionBackground.png);
+    background-position: center;
+    background-size: cover; /*completely cover the text*/
+    color:white; /*doesnt work for links because anchor tag gives blue color */
+    min-height: 75vh;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 50px;
+    height:60px;
+    font-weight: 300;
+}
+.navbar .download{
+font-size: small;
+font-weight: 500;
+display:flex;
+gap:5px;
+justify-content: center;
+align-items: center;
+
+}
+.navbar a{
+    text-decoration: none; /*removes underline*/
+    color: white;
+}
+
+.navbar__menu__container{
+    display: flex;
+    gap:20px;
+}
+
+.user__icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border:solid 1px white;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.hero__section__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(75vh-60px);
+    gap:30px;
+    margin:20px;
+}
+
+.hero__section__logo{
+    width:250px;
+    height:auto;
+}
+
+.hero__section__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.hero__section__input__container{
+    background: white;
+    padding:12px;
+    border-radius: 10px;
+    display: flex;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    width:66%;
+}
+
+.input__container__location, 
+.input__container__search{
+    border:none;
+    padding:3px;
+}
+
+.input__container__location{
+    width: 30%;
+    border-right: 2px solid #D3D3D3;
+}
+
+.input__container__search{
+    width:70%;
+}
+
+@media only screen and (max-width:600px){
+    .navbar__menu__container .link{
+        display:none;
+    }
+    .navbar{
+        padding:16px;
+    }
+    .navbar .user__icon{
+        display:flex;
+    }
+    
+    .hero__section{
+        height: 85vh;
+    }
+    .hero__section__input__container{
+        flex-direction: column;
+        background-color: transparent;
+        
+    }
+    .input__container__location, 
+    .input__container__search{
+        padding: 15px;
+        border-radius: 10px;
+        width:90%;
+    }
+    .hero__section__container{
+        height: calc(85vh-60px);
+    }
+
+    
 }
